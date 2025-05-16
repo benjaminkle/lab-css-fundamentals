@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <h1>Registration Form</h1>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HTML Registration Form -->
+    <form id="register" action="#" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <fieldset style="width: 280px;height: 50px">
+            <legend for="gender">Gender:</legend>
+            <label><input type="radio" name="gender" value="male">Male</label>
+            <label><input type="radio" name="gender" value="female">Female</label>
+            <label"><input type="radio" name="gender" value="other">Other</label>
+        </fieldset>
+        <br>
+
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br>
+        <br>
+
+        <label for="status">Employment Status:</label>
+        <select name="status" id="status" required>
+            <option value="employed">I'm currently employed</option>
+            <option value="selfemployed">I'm currently self-employed</option>
+            <option value="unemployed">Unemployed</option>
+        </select>
+
+        <br>
+        <br>
+        <label for="description">Tell us about yourself (Optional)</label>
+        <br>
+        <textarea name="description" id="description" rows="10" cols="48" maxlength="200"></textarea>
+        <i><p style="font-size: 0.9em; color:gray;">Maximum 200 characters allowed.</p></i>
+        <br>
+    
+        <label><input type="checkbox" name="agree" id="agree" required>I fully agree to prodivde my information.</label>
+        <br><br>
+        <label><input type="checkbox" name="terms">Subscribe to our newletters and ads.</label>
+            <br>
+            <br>
+            <button type="submit">Register</button>
+            <button type="reset">Clear All</button>
+
+    </form>
+
+    <!-- Extension Activity (Optional) Testing JS for validation-->
+    <script> document.getElementById("register").addEventListener("submit", function (a) {
+        a.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let dob = document.getElementById("dob").value;
+        let checkbox = document.getElementById("agree").checked;
+        
+        if (name && email && password && dob && checkbox) {
+            console.log('Registration Successfully!');
+        } else {
+            console.log('Please fill all the fields.');
+        }
+    })
+    </script>
+</body>
+<footer>
+    <h4>&copy 2025 - 2026 KhoaLe. All Rights Reserved </h4>
+</footer>
+</html>

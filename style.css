@@ -1,0 +1,73 @@
+h1 {
+    color: black;
+    font-size: 34px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, lightblue, aquamarine);
+    margin: 80;
+    padding: 20px;
+
+}
+
+form {
+    background-color: rgb(166, 180, 202);
+    padding: 20px;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+#register input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+label[for="name"],
+label[for="email"],
+legend[for="gender"],
+label[for="dob"],
+label[for="status"],
+label[for="description"],
+label[for="password"] {
+    font-weight: 600;
+    line-height: 1px;
+}
+
+button {
+    flex:1;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 49%;
+}
+
+button[type="submit"] {
+    background-color: coral;
+}
+
+button[type="submit"]:hover {
+    background-color: dimgrey;
+}
+
+button[type="reset"]:hover {
+    background-color: lightgray;
+}
+
+footer {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    text-align: center;
+}
