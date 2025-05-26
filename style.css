@@ -41,6 +41,11 @@ label[for="password"] {
   font-weight: 600;
   line-height: 1px;
 }
+#description {
+  resize: vertical;
+  max-width: 100%;
+}
+
 .button-group {
   display: flex;
   gap: 2%;
